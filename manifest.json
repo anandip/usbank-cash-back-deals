@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "US Bank Deals Activator",
+  "version": "1.0",
+  "description": "Activates all U.S. Bank Card cash-back deals.",
+  "permissions": [
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://*.usbank.com/*",
+    "file:///*"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "action": {
+    "default_title": "Click to activate all U.S. Bank cash-back deals",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  }
+}

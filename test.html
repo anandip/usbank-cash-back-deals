@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Test US Bank deals activations</title>
+  <link rel="icon" type="image/png" href="images/icon16.png">
+  <style>
+    .unActiveOffer {
+      display: inline-block;
+      margin: 10px;
+      padding: 20px;
+      background: lightgray;
+      border: 1px solid gray;
+    }
+    .resetBtn {
+      display: inline-block;
+      margin: 10px;
+      padding: 20px;
+      background: red;
+      border: 1px solid gray;
+    }
+  </style>
+</head>
+<body>
+  <h1>Test page for US Bank deals activations</h1>
+  <div class="unActiveOffer">Activate 1</div>
+  <div class="unActiveOffer">Activate 2</div>
+  <div class="unActiveOffer">Activate 3</div>
+  <div class="unActiveOffer">Activate 4</div>
+  <br><br>
+  <button id="resetBtn" class="resetBtn">Reset Deals</button>
+
+  <script>
+    document.querySelectorAll('.unActiveOffer').forEach(function(element, idx) {
+      element.addEventListener('click', function() {
+        element.style.background = 'lightgreen';
+        element.textContent = 'Activated!';
+      });
+    });
+
+    document.getElementById('resetBtn').addEventListener('click', function() {
+      document.querySelectorAll('.unActiveOffer').forEach(function(element, idx) {
+        element.style.background = 'lightgray';
+        element.textContent = 'Activate ' + (idx + 1);
+      });
+    });
+  </script>
+</body>
+</html>
