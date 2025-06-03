@@ -4,11 +4,9 @@
   "version": "1.0",
   "description": "Activates all U.S. Bank Card cash-back deals.",
   "permissions": [
-    "scripting"
-  ],
-  "host_permissions": [
-    "https://*.usbank.com/*",
-    "file:///*"
+    "scripting",
+    "declarativeContent",
+    "activeTab"
   ],
   "background": {
     "service_worker": "src/background.js"
