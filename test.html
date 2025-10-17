@@ -4,7 +4,7 @@
   <title>Test US Bank deals activations</title>
   <link rel="icon" type="image/png" href="images/icon16.png">
   <style>
-    .unActiveOffer {
+    .inactiveOffer {
       display: inline-block;
       margin: 10px;
       padding: 20px;
@@ -22,15 +22,15 @@
 </head>
 <body>
   <h1>Test page for US Bank deals activations</h1>
-  <div class="unActiveOffer">Activate 1</div>
-  <div class="unActiveOffer">Activate 2</div>
-  <div class="unActiveOffer">Activate 3</div>
-  <div class="unActiveOffer">Activate 4</div>
+  <div id="activateOffer" class="inactiveOffer">Activate 1</div>
+  <div id="activateOffer" class="inactiveOffer">Activate 2</div>
+  <div id="activateOffer" class="inactiveOffer">Activate 3</div>
+  <div id="activateOffer" class="inactiveOffer">Activate 4</div>
   <br><br>
   <button id="resetBtn" class="resetBtn">Reset Deals</button>
 
   <script>
-    document.querySelectorAll('.unActiveOffer').forEach(function(element, idx) {
+    document.querySelectorAll('#activateOffer').forEach(function(element, idx) {
       element.addEventListener('click', function() {
         element.style.background = 'lightgreen';
         element.textContent = 'Activated!';
@@ -38,7 +38,7 @@
     });
 
     document.getElementById('resetBtn').addEventListener('click', function() {
-      document.querySelectorAll('.unActiveOffer').forEach(function(element, idx) {
+      document.querySelectorAll('#activateOffer').forEach(function(element, idx) {
         element.style.background = 'lightgray';
         element.textContent = 'Activate ' + (idx + 1);
       });
